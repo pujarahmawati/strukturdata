@@ -1,0 +1,90 @@
+import  java.util.LinkedList ;
+ kelas  publik ContohSenarai2 {
+    public  static  kekosongan  main ( String [] args ) {
+        LinkedList < Simpul > senarai =  new  LinkedList < Simpul > ();
+        Simpul putaran;
+        
+        // Masukkan 5 nama
+        senarai . addFirst ( Simpul baru  ( " AMN " , " Aminudin " ));
+        senarai . addFirst ( Simpul baru  ( " ZAS " , " Zaskia " ));
+        senarai . addFirst ( Simpul baru  ( " RIN " , " Rina Melati " ));
+        senarai . addFirst ( Simpul baru  ( " JAUH " , " Farhan " ));
+        senarai . addFirst ( Simpul baru  ( " AGN " , " Agnes Monica " ));
+
+        Sistem . keluar . println ( " Keadaan awal: " );
+        untuk ( int i =  0 ; i < senarai . size (); i ++ ) {
+            simpul = senarai . dapatkan (i);
+            lingkaran . display ();
+        }
+        hapus (senarai, " RIN " );
+        Sistem . keluar . println ();
+        Sistem . keluar . println ( " Setelah RINilangkan: " );
+        untuk ( int i =  0 ; i < senarai . size (); i ++ ) {
+            simpul = senarai . dapatkan (i);
+            lingkaran . display ();
+        }
+        // Cari RIN
+        String dicari =  " RIN " ;
+        Sistem . keluar . println ();
+        Sistem . keluar . println ( " Pencarian "  + dicari);
+        Simpul posisiData =   cari (senarai, dicari);
+        if (posisiData ==  null )
+            Sistem . keluar . println (dicari +  " tidak ditemukan. " );
+        selain itu {
+            Sistem . keluar . println ( " Hasil pencarian: " );
+            posisiData . display ();
+        }
+        // Cari JAUH
+        dicari =  " JAUH " ;
+        Sistem . keluar . println ();
+        Sistem . keluar . println ( " Pencarian "  + dicari);
+        posisiData =   cari (senarai, dicari);
+        if (posisiData ==  null )
+            Sistem . keluar . println (dicari +  " tidak ditemukan. " );
+        selain itu {
+            Sistem . keluar . println ( " Hasil pencarian: " );
+            posisiData . display ();
+        }
+    }
+         // Untuk mengunduh data
+    public  static  void  hapus ( LinkedList < Simpul >  senarai ,
+                             String  x ) {
+        int posisi =  - 1 ;
+        untuk ( int i =  0 ; i < senarai . size (); i ++ ) {
+            Simpul putaran = senarai . dapatkan (i);
+            if (loop . kode . compareTo (x) ==  0 ) {
+                posisi = i;
+                istirahat ;
+            }
+        }
+      if (posisi ! =  - 1 )
+            senarai . hapus (posisi);
+        lain
+            Sistem . keluar . println (x +  " tidak dapat dihapus. " );
+    }
+        // Untuk mencari data berdasarkan kode
+    public  Simpul cari statis  ( LinkedList < Simpul > senarai ,  
+            String  x ) {
+        int posisi =  - 1 ;
+        untuk ( int i =  0 ; i < senarai . size (); i ++ ) {
+            Simpul putaran = senarai . dapatkan (i);
+            if (loop . kode . compareTo (x) ==  0 ) {
+                posisi = i;
+                istirahat ;
+            }
+        }
+        if (posisi ==  - 1 )
+            kembali  nol ;
+        lain
+            kembali senarai . dapatkan (posisi);
+    }
+}
+
+kelas  Simpul {
+     kode string publik ;
+     nama String publik ;
+    
+     Simpul publik ( String  xkode , String  xnama ) {
+        kode = xkode;
+        nama = xnama;
+    }
