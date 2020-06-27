@@ -1,0 +1,82 @@
+paket  antrian ;
+ Antrian kelas  publik {
+ 
+ // Variabel Internal
+ private  int head =  0 ;
+ swasta  int ekor =  0 ;
+ private  int [] isi =  new  int [ 4 ];
+ 
+ // Kontruktor
+  antrian publik () {}
+
+ public  int  GetIsiByIndex ( int  index )
+ {
+  kembali isi [indeks];
+ }
+ 
+ // Enqueue
+ public  void  Enqueue ( int  x )
+ {
+  if (tail <  4 ) {
+   isi [tail] = x;
+   ekor ++ ;
+  } lain {
+   Sistem . keluar . println ( " Penuh " );
+  }
+ }
+ 
+ // Dequeue
+ public  int  Dequeue () {
+  if (tail ! = head) {
+   int temp = isi [head];
+   untuk ( int a = head; a < tail; a ++ ) {
+    if (a == tail - 1 ) {
+     isi [a] =  0 ;
+    } lain {
+     isi [a] = isi [a + 1 ];
+    }
+   }
+   ekor - ;
+   temp kembali ;
+  } lain {
+   Sistem . keluar . println ( " Kosong " );
+   return  0 ;
+  }
+ }
+ 
+ // Cetak
+ public  void  Print ()
+ {
+  String teks =  " " ;
+  untuk ( int a = 0 ; a < 4 ; a ++ ) {
+   teks + = isi [a] + " , " ;
+  }
+  Sistem . keluar . println (teks);
+ }
+ 
+ public  static  kekosongan  main ( String [] args ) {
+  
+  // Buat antrian
+  Antrian q1 =  Antrian baru  ();
+  
+  // Enqueue
+  q1 . Enqueue ( 31 );
+  q1 . Enqueue ( 32 );
+  q1 . Enqueue ( 33 );
+  q1 . Enqueue ( 34 );
+  q1 . Enqueue ( 35 );
+  q1 . Enqueue ( 36 );
+  q1 . Cetak ();
+  
+  Sistem . keluar . println ( q1 . Dequeue ());
+  q1 . Cetak ();
+  Sistem . keluar . println ( q1 . Dequeue ());
+  q1 . Cetak (); Sistem . keluar . println ( q1 . Dequeue ());
+  q1 . Cetak ();
+  Sistem . keluar . println ( q1 . Dequeue ());
+  q1 . Cetak ();
+  Sistem . keluar . println ( q1 . Dequeue ());
+  q1 . Cetak ();
+ }
+ 
+}
