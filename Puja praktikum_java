@@ -1,0 +1,44 @@
+paket  contohlinkedlist ;
+/ **
+  * sumber: https://www.geeksforgeeks.org/linked-list-in-java/
+ * /
+
+import  java.util. * ;
+
+ kelas  publik ContohLinkedList {
+    public  static  kekosongan  main ( String [] args ) {
+// Membuat objek yang terdaftar pada kelas LinkedList
+        LinkedList < String > daftar =  new  LinkedList < String > ();
+         // coba elemen pada daftar tertaut
+        daftar . tambahkan ( " A " );
+        daftar . tambahkan ( " B " );
+        daftar . addLast ( " C " );
+        daftar . addFirst ( " D " );
+        daftar . tambahkan ( 3 , " B " );
+        daftar . tambahkan ( " F " );
+        daftar . tambahkan ( " G " );
+        Sistem . keluar . println ( " Daftar tertaut: "  + daftar);
+         // Menghapus elemen dari daftar tertaut
+        daftar . hapus ( " B " );
+        daftar . hapus ( 3 );
+        daftar . removeFirst ();
+        daftar . removeLast ();
+        Sistem . keluar . println ( " Daftar tertaut setelah dihapus: "  + daftar);
+         // Menemukan elemen pada daftar tertaut
+        boolean status = daftar . mengandung ( " E " );
+         jika (status)
+            Sistem . keluar . println ( " Di Daftar Ada elemen 'E' " );
+        lain
+            Sistem . keluar . println ( " Daftar Di tidak terdapat elemen 'E' " );
+ 
+        // ukuran dari elemen pada daftar tertaut
+        int size = daftar . ukuran();
+        Sistem . keluar . println ( " Ukuran dari linked list = "  + size);
+ 
+        // Menunjuk dan memberi nilai elemen dari daftar tertaut
+        Obyek elemen = PT . dapatkan ( 2 );
+        Sistem . keluar . println ( " elemen yang ditunjuk oleh get (): "  + element);
+        daftar . set ( 2 , " Y " );
+        Sistem . keluar . println ( " Daftar tautan pasca perubahan: "  + daftar);
+    }
+}
