@@ -1,0 +1,26 @@
+paket  demostackpushint ;
+import  java.util. * ;
+ DemoStackPushInt kelas  publik {
+   public  static  kekosongan  main ( String  args [])
+    { 
+        // Membuat Stack kosong
+        Stack < Integer >  STACK  =  new  Stack < Integer > ();
+  
+        // Gunakan push () untuk menambahkan elemen ke dalam Stack
+        STACK . push ( 10 );
+        STACK . push ( 15 );
+        STACK . push ( 30 );
+        STACK . push ( 20 );
+        STACK . push ( 5 );
+  
+        // Menampilkan Stack
+        Sistem . keluar . println ( " Stack Awal: "  +  STACK );
+  
+        // Mendorong elemen ke dalam Stack
+        STACK . push ( 1254 );
+        STACK . push ( 4521 );
+  
+        // Menampilkan Stack terakhir
+        Sistem . keluar . println ( " Perbarui Stack: "  +  STACK );
+    } 
+}
