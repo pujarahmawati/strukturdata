@@ -1,0 +1,26 @@
+paket  demostackpopstring ;
+import  java.util. * ;
+ DemoStackPopString kelas  publik {
+    public  static  kekosongan  main ( String [] args ) {
+         // Membuat Stack kosong
+        Stack < String >  STACK  =  Stack baru  < String > ();  
+
+        STACK . push ( " Minggu " );
+        STACK . push ( " Senin " );
+        STACK . push ( " Selasa " );
+        STACK . push ( " Rabu " );
+        STACK . push ( " Kamis " );
+  
+        // Menampilkan Stack
+        Sistem . keluar . println ( " Stack Awal: "  +  STACK );
+  
+        // Menghapus elemen menggunakan metode pop ()
+        Sistem . keluar . println ( " Elemen Pop: "  +  
+                                         STACK . pop ());
+        Sistem . keluar . println ( " Elemen Pop: "  +  
+                                         STACK . pop ());
+  
+        // Menampilkan Stack setelah operasi pop
+        Sistem . keluar . println ( " Perbarui Tumpukan "
+                                             +  STACK );
+    }
