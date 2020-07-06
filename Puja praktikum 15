@@ -1,0 +1,36 @@
+paket  bubblesortdetail ;
+ BubbleSortDetail kelas  publik {
+public  static  kekosongan  main ( String [] args ) {
+int arr [] = { 5 , 3 , 1 , 9 , 8 , 2 , 4 , 7 };
+Sistem . keluar . println ( " --- Array SEBELUM Bubble Sort --- " );
+printArray (arr);
+BubbleSortDetail (arr); // mengurutkan elemen array menggunakan bubble sort
+Sistem . keluar . println ( " --- Array SETELAH Bubble Sort --- " );
+printArray (arr);
+}
+static  void  BubbleSortDetail ( int [] array ) {
+int n = array . panjangnya;
+int temp =  0 ;
+untuk ( int i = 0 ; i < n; i ++ ) // Mengitari panjang array
+{ Sistem . keluar . println ( " Sort Yang KE " + (i + 1 ));
+untuk ( int j = 1 ; j < (n - i); j ++ ) {
+Sistem . keluar . println ( " Bandingkan " + array [j - 1 ] +  " dan "  + array [j]);
+if (array [j - 1 ] > array [j]) {
+// elemen swap
+temp = array [j - 1 ];
+array [j - 1 ] = array [j];
+array [j] = temp;
+Sistem . keluar . println (array [j] +  " lebih besar dari pada "  + array [j - 1 ]);
+Sistem . keluar . println ( " Tukar elemen: Array baru setelah pertukaran " );
+printArray (array);
+}
+}
+}
+}
+static  void  printArray ( int [] array ) {
+for ( int i = 0 ; i < array . length; i ++ ) {
+Sistem . keluar . print (array [i] +  "  " );
+}
+Sistem . keluar . println ();
+}
+}
