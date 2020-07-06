@@ -1,0 +1,33 @@
+paket  bubblesort ;
+ BubbleSort kelas  publik {
+void  bubbleSort ( int  arr [])
+{
+int n = arr . panjangnya;
+untuk ( int i =  0 ; i < n - 1 ; i ++ )
+untuk ( int j =  0 ; j < n - i - 1 ; j ++ )
+if (arr [j] > arr [j + 1 ])
+{
+// swap arr [j + 1] dan arr [i]
+int temp = arr [j];
+arr [j] = arr [j + 1 ];
+arr [j + 1 ] = temp;
+}
+}
+/ * Mencetak array * /
+membatalkan  printArray ( int  arr [])
+{
+int n = arr . panjangnya;
+untuk ( int i = 0 ; i < n; ++ i)
+Sistem . keluar . cetak (arr [i] +  "  " );
+Sistem . keluar . println ();
+}
+// Metode driver untuk menguji di atas
+public  static  kekosongan  main ( String  args [])
+{
+BubbleSort ob =  BubbleSort baru  ();
+int arr [] = { 5 , 3 , 1 , 9 , 8 , 2 , 4 , 7 };
+ob . bubbleSort (arr);
+Sistem . keluar . println ( " Array yang diurutkan " );
+ob . printArray (arr);
+}
+}
